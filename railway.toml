@@ -1,0 +1,15 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pip install -r requirements.txt"
+
+[deploy]
+startCommand = "python app.py"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[environments.production.variables]
+RAILWAY_ENVIRONMENT = "production"
+LOG_LEVEL = "INFO"
+ALLOWED_HOSTS = "augentik.com,www.augentik.com,lightrag-production-6328.up.railway.app"
