@@ -20,12 +20,12 @@ from langchain_core.runnables import RunnablePassthrough
 from pydantic import BaseModel, Field
 from langchain_core.output_parsers import PydanticOutputParser
 
-from .checklist_parser import ChecklistParser
-from .document_processor import DocumentProcessor
-from .rag_pipeline import RAGPipeline
-from ..models.compliance_result import ComplianceResult, ComplianceStatus, EvidenceCitation, ComplianceReport
-from ..models.ifrs_requirement import IFRSRequirement, IFRSStandard
-from ..utils.config import ComplianceConfig
+from compliance_co_pilot.core.checklist_parser import ChecklistParser
+from compliance_co_pilot.core.document_processor import DocumentProcessor
+from compliance_co_pilot.core.rag_pipeline import RAGPipeline
+from compliance_co_pilot.models.compliance_result import ComplianceResult, ComplianceStatus, EvidenceCitation, ComplianceReport
+from compliance_co_pilot.models.ifrs_requirement import IFRSRequirement, IFRSStandard
+from compliance_co_pilot.utils.config import ComplianceConfig
 
 logger = logging.getLogger(__name__)
 
